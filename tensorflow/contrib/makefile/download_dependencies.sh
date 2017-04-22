@@ -16,8 +16,8 @@
 
 set -e
 
-DOWNLOADS_DIR=tensorflow/contrib/makefile/downloads
-BZL_FILE_PATH=tensorflow/workspace.bzl
+DOWNLOADS_DIR=/home/pi/tensorflow-master/tensorflow/contrib/makefile/downloads  #I change the directory to be recognized by raspberry pi
+BZL_FILE_PATH=/home/pi/tensorflow-master/tensorflow/workspace.bzl   #I change the directory to be recognized by raspberry pi
 
 EIGEN_URL="$(grep -o 'http.*bitbucket.org/eigen/eigen/get/.*tar\.gz' "${BZL_FILE_PATH}" | grep -v bazel-mirror | head -n1)"
 GEMMLOWP_URL="$(grep -o 'http.*github.com/google/gemmlowp/.*tar\.gz' "${BZL_FILE_PATH}" | grep -v bazel-mirror | head -n1)"
